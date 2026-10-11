@@ -1,7 +1,10 @@
 import type { MetadataRoute } from 'next';
-import { tools } from '../data/tools';
+
+// Only list verified, publicly accessible pages. Individual /tools/[slug]
+// routes are temporarily excluded until Cloudflare routing is repaired.
+// The homepage currently provides tool reviews via ?tool=... modals;
+// those query-based views are not standalone indexable pages.
 const base=(process.env.NEXT_PUBLIC_SITE_URL || 'https://aiatlashub.rajat-ray.workers.dev').replace(/\/$/,'');
-const slug=(name:string)=>name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-export default function sitemap():MetadataRoute.Sitemap{
- return [{url:base,changeFrequency:'weekly',priority:1},...tools.map(t=>({url:`${base}/tools/${slug(t.name)}`,changeFrequency:'monthly' as const,priority:0.7}))];
+export default function sitemap():MetadataRoute.Sitemap {
+  return [{url:base,changeFrequency:'weekly',priority:1}];
 }
