@@ -57,3 +57,30 @@ body{background:#fbfbf7;color:#17251e}
 .card-category{color:#477451}
 @media(max-width:800px){.hero-inner{grid-template-columns:1fr;gap:25px}.editorial-grid{grid-template-columns:1fr}.hero-right.editorial-cover{max-width:480px}.editorial-side{grid-template-columns:1fr 1fr;grid-template-rows:auto}}
 @media(max-width:560px){.editorial-side{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}.hero-inner{padding:48px 0}.editorial-desk{padding-top:48px}.cover-art{height:160px}}
+
+
+/* V2 refinement: consistent light surfaces across remaining sections */
+.info-band{background:#edf2e9;border-top:1px solid #dce4d9;border-bottom:1px solid #dce4d9;color:#17251e}
+.info-band h2,.info-steps h3,.vendor h2{color:#17251e}
+.info-steps>div{border-color:#d6e0d4}.info-steps>div>span{color:#26704b;background:#dbe9d9}
+.info-steps p,.info-band p{color:#647369}
+.vendor{color:#17251e}.vendor-art{background:#dce9d7;color:#1c4834;border-color:#d0e0cf}
+.footer-main,.footer-bottom{color:#66766b}.footer-main strong{color:#173b2b}
+footer{background:#f0f3ed;border-top:1px solid #dce4d9}
+.footer-main a:hover{color:#26704b}.footer-bottom{border-color:#d5dfd2}
+.modal{background:#fff;border-color:#dce4d9;color:#17251e;box-shadow:0 25px 90px #10241940;max-height:90vh;overflow-y:auto}
+.modal-close{color:#173b2b}.modal>p{color:#647369}
+.modal-note{background:#edf2e9;color:#4f6858}.modal-note svg{color:#26704b}
+.modal h2,.modal h3{color:#173b2b}
+.modal-tags span,.tags span{background:#edf2e9;border-color:#d9e3d8;color:#47634d}
+.tool-card h3,.tool-card p{color:#17251e}.tool-card p{color:#647369}
+.card-foot{border-color:#e0e7dd}.card-foot button{color:#26704b}
+.pricing{border-color:#dce4d9}.compare-btn.selected{background:#dbe9d9;color:#173b2b}
+.empty{color:#647369}.empty h3{color:#173b2b}
+.compare-bar{background:#e2eee0;color:#173b2b;box-shadow:0 12px 45px #10241935}
+.compare-bar span{color:#52705b}
+.links.open{background:#fff}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #26704b;outline-offset:3px}
+#directory,#audiences,#editors-desk,#how,#for-vendors{scroll-margin-top:90px}
+@media(max-width:650px){.links{background:#fff;border-bottom:1px solid #dce4d9;box-shadow:0 12px 25px #10241915}.links a{color:#173b2b}.hero-right.editorial-cover{display:block;width:100%;max-width:430px;margin:0 auto}.cover-art{height:145px}.cover-art>span{font-size:76px}.hero-inner{gap:24px}.editorial-graphic{height:135px}.editorial-graphic span{padding:15px 10px;font-size:12px}.editorial-graphic{gap:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tool-card{transition:none}}
