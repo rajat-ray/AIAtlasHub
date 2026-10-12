@@ -36,3 +36,19 @@ Prefer official product documentation for factual corrections. Record the change
 - [ ] Editorial trade-offs and buying checks included
 - [ ] Type check, catalog audit and build pass
 - [ ] Public pages and sitemap checked after deployment
+
+## Dated listing revisions and vendor verification
+
+Maintain `data/catalog-updates.ts` when editing a listing. Each `catalogUpdates` record must have the actual editorial change date (ISO YYYY-MM-DD), a concise factual summary, `kind` and the exact affected `toolNames`. Do not backfill historical dates from memory. A site-only change uses `toolNames: []`.
+
+A `toolVerifications` record is separate and must be supported by dated inspection of public authoritative sources. Include `checkedOn`, `sourceUrls`, `scope` and `note`. Only claim verification for the fields actually checked (identity, pricing, capabilities, privacy or security). Do not treat a reachable homepage, prior directory entry or submission claim as a completed verification.
+
+For a listing change without authoritative re-verification, add the catalog update but leave its verification record unchanged. Product detail pages deliberately show "No dated, source-backed verification record" until a check is documented.
+
+Example (replace placeholders with actual checked evidence, never synthetic dates):
+```ts
+// catalogUpdates: add a record for the real editorial change
+{date:'YYYY-MM-DD',title:'Corrected Example Tool category',summary:'Changed category after review of the official product description.',toolNames:['Example Tool'],kind:'catalog'}
+// toolVerifications: only after inspecting the actual source on that date
+'Example Tool':{checkedOn:'YYYY-MM-DD',sourceUrls:['https://example.com/docs'],scope:['identity','capabilities'],note:'Checked the official product documentation for identity and use case; pricing not checked.'}
+```
