@@ -20,3 +20,15 @@ export const catalogUpdates:CatalogUpdate[]=[
  }
 ];
 export const catalogUpdateDate=(name:string)=>catalogUpdates.find(entry=>entry.toolNames.includes(name))?.date;
+
+/** Explicit evidence records only. Do not infer a verification date from a
+ * catalog edit, a live link, or the date a tool was added to the directory.
+ */
+export type ToolVerification={
+ checkedOn:string;
+ sourceUrls:readonly string[];
+ scope:readonly ('identity'|'pricing'|'capabilities'|'privacy'|'security')[];
+ note:string;
+};
+export const toolVerifications:Record<string,ToolVerification>={};
+export const toolHistory=(name:string)=>catalogUpdates.filter(entry=>entry.toolNames.includes(name));
