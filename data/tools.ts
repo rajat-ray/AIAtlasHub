@@ -7,7 +7,7 @@ export const tools:Tool[] = [
 ['NotebookLM','AI Search','Research assistant grounded in user-provided sources.','https://notebooklm.google.com','Freemium','Documents,Research'],
 ['GitHub Copilot','AI Coding','AI coding assistant integrated with developer workflows.','https://github.com/features/copilot','Freemium','IDE,Developer'],
 ['Cursor','AI Coding','AI-first code editor with codebase-aware assistance.','https://cursor.com','Freemium','IDE,Developer'],
-['Windsurf','AI Coding','AI coding environment with agentic workflows.','https://windsurf.com','Freemium','IDE,Agent'],
+['Devin Desktop','AI Coding','Agent-focused coding desktop built on the former Windsurf IDE, supporting local and cloud agent workflows.','https://devin.ai/download','Freemium','IDE,Agent'],
 ['Replit','AI Coding','Cloud development platform with AI-powered app building.','https://replit.com','Freemium','Apps,Developer'],
 ['Tabnine','AI Coding','AI code completion and assistance for engineering teams.','https://www.tabnine.com','Paid','Enterprise,IDE'],
 ['Sourcegraph Cody','AI Coding','Code search and AI assistance across codebases.','https://sourcegraph.com/cody','Freemium','Codebase,Search'],
