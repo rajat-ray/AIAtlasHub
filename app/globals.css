@@ -244,3 +244,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .compare-builder-choices small{display:block;font-size:11px;color:#647369;font-weight:400}
 .compare-builder-choices button{font-size:11px;padding:8px 10px}
 @media(max-width:650px){.compare-builder{padding:16px}.compare-builder-heading,.compare-builder-row{grid-template-columns:90px repeat(2,minmax(0,1fr));gap:7px;padding:10px}.compare-builder-heading,.compare-builder-row>span,.compare-builder-row>a{font-size:11px}.compare-builder-controls label{min-width:100%}.compare-builder-browser-controls{flex-direction:column}}
+
+/* Shareable comparison feedback */
+.compare-builder-controls button:disabled{opacity:.5;cursor:not-allowed}
+.compare-share-status{min-height:1.3em;color:#26704b!important;font-size:12px!important;margin:-8px 0 15px}
