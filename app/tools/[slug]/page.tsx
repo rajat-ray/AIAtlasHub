@@ -7,7 +7,7 @@ import { editorialReviews } from '../../../data/editorial';
 const slugify=(name:string)=>name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 type Props={params:Promise<{slug:string}>};
 export function generateStaticParams(){return tools.map(t=>({slug:slugify(t.name)}));}
-export const dynamicParams=false;
+// Let Next.js handle unknown slugs through notFound() without an adapter fallback conflict.
 export async function generateMetadata({params}:Props):Promise<Metadata>{
  const {slug}=await params;const t=tools.find(t=>slugify(t.name)===slug);
  if(!t)return {title:'Tool not found | AIAtlasHub'};
