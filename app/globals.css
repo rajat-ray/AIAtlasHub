@@ -177,3 +177,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .category-index-link-note a{color:#26704b;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:950px){.category-page-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:580px){.category-page-grid{grid-template-columns:1fr}}
+
+
+/* Related tool discovery on editorial detail pages */
+.tool-related{margin:40px 0 32px;padding-top:25px;border-top:1px solid #dce4d9}
+.tool-related h2{font:700 25px 'Space Grotesk',sans-serif;color:#173b2b;margin-bottom:18px}
+.tool-related>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tool-related>div>a{display:flex;flex-direction:column;gap:5px;padding:16px 18px;background:#fff;border:1px solid #dce4d9;border-radius:12px;color:#173b2b;text-decoration:none}
+.tool-related>div>a:hover{border-color:#26704b}
+.tool-related>div>a span{color:#647369;font-size:12px}
+.tool-related>p>a{font-size:13px;font-weight:700;color:#26704b}
+@media(max-width:580px){.tool-related>div{grid-template-columns:1fr}}
