@@ -52,3 +52,11 @@ Example (replace placeholders with actual checked evidence, never synthetic date
 // toolVerifications: only after inspecting the actual source on that date
 'Example Tool':{checkedOn:'YYYY-MM-DD',sourceUrls:['https://example.com/docs'],scope:['identity','capabilities'],note:'Checked the official product documentation for identity and use case; pricing not checked.'}
 ```
+
+## Automated vendor URL health scans
+
+The `AIAtlasHub vendor link health` GitHub Actions workflow runs weekly (Monday 02:17 UTC) and on manual dispatch. It executes `python scripts/check-vendor-links.py` and stores JSON and Markdown reports as workflow artifacts for 30 days.
+
+The scanner checks only public URLs already listed in `data/tools.ts`. An HTTP success confirms reachability at the time of the request, **not** the vendor's identity, continued product availability, feature claims or pricing. Redirects should be inspected for changes of ownership, rebranding and product retirement. A 403, 429, timeout or other error is a review signal, not proof of a broken product. Some vendors prohibit or block automated checks.
+
+For each review item: open the vendor's official website manually, corroborate major lifecycle or pricing changes against authoritative sources, update the listing and dated `catalogUpdates` record, and create a `toolVerifications` entry only for fields genuinely checked. Do not automatically remove listings or change pricing based on this report. The workflow intentionally does not fail the main quality gate on transient vendor network errors.
