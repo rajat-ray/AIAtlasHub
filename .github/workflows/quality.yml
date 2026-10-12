@@ -1,0 +1,29 @@
+name: AIAtlasHub quality checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit catalog and editorial coverage
+        run: python scripts/audit-catalog.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Check TypeScript
+        run: npx tsc --noEmit
+      - name: Build Next.js
+        run: npm run build
