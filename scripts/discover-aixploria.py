@@ -14,11 +14,12 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import urllib.robotparser
+import argparse
 from html.parser import HTMLParser
 from pathlib import Path
 
 BASE = "https://www.aixploria.com"
-PATHS = ["/en/", "/en/categories-ai/", "/en/last-ai/", "/en/free-ai/"]
+PATHS = ["/en/", "/en/categories-ai/", "/en/last-ai/", "/en/ultimate-list-ai/"]
 AGENT = "AIAtlasHubDiscovery/0.1 (+manual editorial research; contact via GitHub)"
 OUTPUT = Path("data/discovery-candidates.json")
 MAX_REQUESTS = 4
@@ -46,6 +47,9 @@ class LinkParser(HTMLParser):
 
 
 def main():
+    parser_args = argparse.ArgumentParser(description="Build a manually reviewed AI tool discovery queue")
+    parser_args.add_argument("--max-pages", type=int, default=4, help="Maximum approved seed pages, capped at 4")
+    args = parser_args.parse_args()
     robots = urllib.robotparser.RobotFileParser()
     robots.set_url(BASE + "/robots.txt")
     try:
@@ -53,7 +57,7 @@ def main():
     except (OSError, urllib.error.URLError) as exc:
         raise SystemExit(f"Robots policy unavailable; refusing to crawl: {exc}")
     results = []
-    for path in PATHS[:MAX_REQUESTS]:
+    for path in PATHS[:max(0, min(args.max_pages, MAX_REQUESTS))]:
         url = urllib.parse.urljoin(BASE, path)
         if not robots.can_fetch(AGENT, url):
             print(f"Robots disallows {url}; skipped")
@@ -85,6 +89,7 @@ def main():
                             "status": "unverified", "requires_original_review": True})
         time.sleep(DELAY_SECONDS)
     unique = list({(r["candidate"], r["detail_url"]): r for r in results}.values())
+    unique.sort(key=lambda item: (item["candidate"].casefold(), item["detail_url"]))
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps({"source": BASE, "review_required": True,
                                   "notes": "Navigation links and candidate titles only; not approved product records.",
