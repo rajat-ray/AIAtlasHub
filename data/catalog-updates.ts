@@ -24,6 +24,13 @@ export const catalogUpdates:CatalogUpdate[]=[
   summary:'Reviewed official product and pricing pages for ChatGPT, Claude and GitHub Copilot. Verified only product identity, pricing structure and listed capabilities; no hands-on testing or privacy/security audit.',
   toolNames:['ChatGPT','Claude','GitHub Copilot'],
   kind:'editorial'
+ },
+ {
+  date:'2026-10-12',
+  title:'Official-source verification: coding and research tools',
+  summary:'Checked official pricing and product documentation for Cursor, Gemini, Perplexity and NotebookLM (now described as Gemini Notebook by Google). Scope limited to identity, pricing structure and advertised capabilities.',
+  toolNames:['Cursor','Gemini','Perplexity','NotebookLM'],
+  kind:'editorial'
  }
 ];
 export const catalogUpdateDate=(name:string)=>catalogUpdates.find(entry=>entry.toolNames.includes(name))?.date;
@@ -38,6 +45,11 @@ export type ToolVerification={
  note:string;
 };
 export const toolVerifications:Record<string,ToolVerification>={
+ 'Cursor':{checkedOn:'2026-10-12',sourceUrls:['https://cursor.com/pricing','https://prod.cursor.com/docs/models-and-pricing'],scope:['identity','pricing','capabilities'],note:'Official pricing and model documentation checked: Hobby free, individual paid plans and team plans; AI coding, agent features and model usage pools described. Prices and limits may vary by region and plan. No independent performance or security testing.'},
+ 'Gemini':{checkedOn:'2026-10-12',sourceUrls:['https://gemini.google/sg/subscriptions/?hl=en'],scope:['identity','pricing','capabilities'],note:'Google Singapore subscription page checked for Free, AI Plus, AI Pro and AI Ultra tiers, and advertised Gemini app features. Prices are regional and usage limits change; no privacy or security audit.'},
+ 'Perplexity':{checkedOn:'2026-10-12',sourceUrls:['https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you','https://www.perplexity.ai/hub'],scope:['identity','pricing','capabilities'],note:'Official help center and product page checked for Standard (Free), Pro, Max and enterprise options, research and source-backed search features. Subscription limits and availability vary; no privacy or security audit.'},
+ 'NotebookLM':{checkedOn:'2026-10-12',sourceUrls:['https://support.google.com/gemininotebook/answer/16213268?hl=en'],scope:['identity','pricing','capabilities'],note:'Official Google help page checked for free Standard notebook access and expanded limits through Google AI plans and eligible Workspace plans. Google now labels the product Gemini Notebook in its documentation. No independent data-handling or security audit.'},
+
  'ChatGPT':{
   checkedOn:'2026-10-12',
   sourceUrls:['https://chatgpt.com/pricing/'],
