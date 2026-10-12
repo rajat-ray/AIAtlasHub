@@ -188,3 +188,30 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .tool-related>div>a span{color:#647369;font-size:12px}
 .tool-related>p>a{font-size:13px;font-weight:700;color:#26704b}
 @media(max-width:580px){.tool-related>div{grid-template-columns:1fr}}
+
+
+/* Standalone qualitative comparison library */
+.compare-page{min-height:100vh;background:#fbfbf7;color:#173b2b;padding:38px 0 90px}
+.compare-page h1{font:700 clamp(33px,5vw,54px) 'Space Grotesk',sans-serif;letter-spacing:-1.8px;line-height:1.13;margin:14px 0}
+.compare-lead{max-width:800px;font-size:16px;line-height:1.8;color:#526658;margin:12px 0 35px}
+.compare-index-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.compare-index-grid>a,.compare-side-by-side article{background:#fff;border:1px solid #dce4d9;border-radius:14px;padding:28px;color:#173b2b}
+.compare-index-grid>a:hover{border-color:#26704b}
+.compare-index-grid h2,.compare-side-by-side h2{font:700 25px 'Space Grotesk',sans-serif;letter-spacing:-.6px;margin:12px 0}
+.compare-index-grid p,.compare-side-by-side p,.compare-side-by-side li,.compare-criteria p,.compare-criteria li{font-size:14px;line-height:1.75;color:#526658}
+.compare-index-grid strong,.compare-side-by-side article>a{color:#26704b;font-size:13px}
+.compare-side-by-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.compare-side-by-side h3{font-size:16px;margin:24px 0 6px}
+.compare-side-by-side ul{padding-left:20px}
+.compare-side-by-side li{margin-bottom:8px}
+.compare-criteria{max-width:820px;border-top:1px solid #dce4d9;margin:38px 0 24px;padding-top:24px}
+.compare-criteria h2{font:700 27px 'Space Grotesk',sans-serif}
+.compare-criteria li{margin-bottom:8px}
+.compare-disclaimer{font-size:12px;color:#647369;line-height:1.7}
+.comparison-teaser{display:grid;grid-template-columns:1.2fr 1fr;gap:35px;background:#173b2b;color:#fff;padding:36px;border-radius:16px;margin:15px auto 55px}
+.comparison-teaser h2{font:700 clamp(26px,3vw,37px) 'Space Grotesk',sans-serif;letter-spacing:-1px;margin:12px 0}
+.comparison-teaser p{font-size:14px;line-height:1.75;color:#d6e2d8}
+.comparison-teaser a{color:#d8f1de;font-weight:700;font-size:13px;display:inline-flex;gap:9px;align-items:center}
+.comparison-teaser-links{display:flex;flex-direction:column;gap:10px;justify-content:center}
+.comparison-teaser-links a{display:flex;justify-content:space-between;padding:15px;border:1px solid #8fb39b;border-radius:9px}
+@media(max-width:700px){.compare-index-grid,.compare-side-by-side,.comparison-teaser{grid-template-columns:1fr}.comparison-teaser{padding:25px}}
