@@ -49,7 +49,7 @@ export const tools:Tool[] = [
 ['Weights & Biases','AI Observability','Experiment tracking and ML development tooling.','https://wandb.ai','Freemium','Evaluation,MLOps'],
 ['Vapi','AI Audio','Platform for building conversational voice agents.','https://vapi.ai','Paid','Voice,API'],
 ['Bolt.new','AI Coding','Prompt-driven web application prototyping and building.','https://bolt.new','Freemium','Apps,No-code'],
-['Lovable','AI Coding','AI-powered web app creation from natural language.','https://lovable.dev','Freemium','Apps,No-code']
+['Lovable','AI Coding','AI-powered web app creation from natural language.','https://lovable.dev','Freemium','Apps,No-code'],
 ['Gamma','AI Productivity','Create and edit presentations, documents and web pages with AI assistance.','https://gamma.app','Freemium','Presentations,Design'],
 ['Ideogram','AI Design','Generate images, logos and posters with an emphasis on readable text in visuals.','https://ideogram.ai','Freemium','Images,Typography'],
 ['Google AI Studio','AI Infrastructure','Prototype Gemini model prompts and experiment with the Gemini API.','https://aistudio.google.com','Free','Gemini,Developer'],
