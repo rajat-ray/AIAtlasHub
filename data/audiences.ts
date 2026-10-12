@@ -2,7 +2,7 @@
 export const audiences: {id:string;label:string;description:string;tools:string[]}[] = [
 {id:'students',label:'Students',description:'Study, research, writing and learning support',tools:['ChatGPT','Claude','Gemini','NotebookLM','Perplexity','Grammarly','Canva','Notion AI']},
 {id:'teachers',label:'Teachers & Educators',description:'Lesson preparation, teaching resources and accessible content',tools:['ChatGPT','Claude','NotebookLM','Canva','Gemini','Grammarly','Synthesia']},
-{id:'developers',label:'Software Developers',description:'Coding, debugging, prototypes and code review',tools:['GitHub Copilot','Cursor','Windsurf','Replit','Amazon Q Developer','Tabnine','Bolt.new','Lovable']},
+{id:'developers',label:'Software Developers',description:'Coding, debugging, prototypes and code review',tools:['GitHub Copilot','Cursor','Devin Desktop','Replit','Amazon Q Developer','Tabnine','Bolt.new','Lovable']},
 {id:'architects',label:'Solution & Enterprise Architects',description:'Architecture research, solution design and engineering workflows',tools:['ChatGPT','Claude','GitHub Copilot','Perplexity','LangChain','LlamaIndex','n8n','Glean']},
 {id:'security',label:'Cybersecurity Professionals',description:'AI security, threat research and application guardrails',tools:['Lakera Guard','Protect AI','ChatGPT','Claude','Perplexity','Langfuse','Arize AI']},
 {id:'executives',label:'CTOs & Technology Leaders',description:'Technology strategy, productivity and AI governance',tools:['ChatGPT','Claude','Perplexity','Glean','GitHub Copilot','Notion AI','Langfuse','Arize AI']},
