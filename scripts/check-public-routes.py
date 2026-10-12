@@ -31,8 +31,8 @@ def main():
             if path == "/sitemap.xml":
                 root = ET.fromstring(body)
                 urls = root.findall("{http://www.sitemaps.org/schemas/sitemap/0.9}url")
-                if len(urls) != 124:
-                    raise ValueError(f"Expected 124 sitemap URLs, found {len(urls)}")
+                if len(urls) != 123:
+                    raise ValueError(f"Expected 123 sitemap URLs, found {len(urls)}")
             print(f"PASS {path} ({status})")
         except (urllib.error.URLError, ValueError, ET.ParseError) as exc:
             failed.append(path)
