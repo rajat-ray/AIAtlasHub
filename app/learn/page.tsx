@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { tools } from '../../data/tools';
 
 export const metadata:Metadata={
  title:'AI Learning Hub | AIAtlasHub',
