@@ -50,5 +50,8 @@ export const tools:Tool[] = [
 ['Vapi','AI Audio','Platform for building conversational voice agents.','https://vapi.ai','Paid','Voice,API'],
 ['Bolt.new','AI Coding','Prompt-driven web application prototyping and building.','https://bolt.new','Freemium','Apps,No-code'],
 ['Lovable','AI Coding','AI-powered web app creation from natural language.','https://lovable.dev','Freemium','Apps,No-code']
+['Gamma','AI Productivity','Create and edit presentations, documents and web pages with AI assistance.','https://gamma.app','Freemium','Presentations,Design'],
+['Ideogram','AI Design','Generate images, logos and posters with an emphasis on readable text in visuals.','https://ideogram.ai','Freemium','Images,Typography'],
+['Google AI Studio','AI Infrastructure','Prototype Gemini model prompts and experiment with the Gemini API.','https://aistudio.google.com','Free','Gemini,Developer'],
 ].map(([name,category,description,url,pricing,tags],i)=>({name,category,description,url,pricing:pricing as Tool['pricing'],tags:tags.split(','),featured:[0,5,12,16,21,34].includes(i)}));
 export const categories=['All tools',...Array.from(new Set(tools.map(t=>t.category)))];
