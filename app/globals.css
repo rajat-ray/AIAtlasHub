@@ -248,3 +248,19 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 /* Shareable comparison feedback */
 .compare-builder-controls button:disabled{opacity:.5;cursor:not-allowed}
 .compare-share-status{min-height:1.3em;color:#26704b!important;font-size:12px!important;margin:-8px 0 15px}
+
+
+/* Dated editorial change log */
+.updates-page{min-height:100vh;background:#fbfbf7;color:#173b2b;padding:38px 0 90px}
+.updates-page h1{font:700 clamp(35px,5vw,54px) 'Space Grotesk',sans-serif;letter-spacing:-1.7px;margin:16px 0}
+.updates-lead{font-size:16px;line-height:1.85;color:#526658;max-width:800px;margin-bottom:32px}
+.updates-timeline{display:grid;gap:16px;max-width:840px}
+.updates-timeline article{background:#fff;border:1px solid #dce4d9;border-radius:14px;padding:24px}
+.updates-timeline time{font-size:12px;font-weight:700;color:#26704b}
+.updates-kind{font-size:11px;background:#edf2e9;color:#24593a;padding:5px 9px;border-radius:20px;margin-left:12px}
+.updates-timeline h2{font:700 24px 'Space Grotesk',sans-serif;margin:13px 0 8px}
+.updates-timeline p,.updates-explainer p{font-size:14px;line-height:1.8;color:#526658}
+.updates-tools{display:flex;flex-wrap:wrap;gap:12px}
+.updates-tools a,.updates-explainer a{color:#26704b;text-decoration:underline;text-underline-offset:3px}
+.updates-explainer{border-top:1px solid #dce4d9;max-width:840px;margin-top:42px;padding-top:22px}
+.updates-explainer h2{font:700 26px 'Space Grotesk',sans-serif}
