@@ -10,7 +10,7 @@ export const tools:Tool[] = [
 ['Devin Desktop','AI Coding','Agent-focused coding desktop built on the former Windsurf IDE, supporting local and cloud agent workflows.','https://devin.ai/download','Freemium','IDE,Agent'],
 ['Replit','AI Coding','Cloud development platform with AI-powered app building.','https://replit.com','Freemium','Apps,Developer'],
 ['Tabnine','AI Coding','AI code completion and assistance for engineering teams.','https://www.tabnine.com','Paid','Enterprise,IDE'],
-['Sourcegraph Cody','AI Coding','Code search and AI assistance across codebases.','https://sourcegraph.com/cody','Freemium','Codebase,Search'],
+['Sourcegraph Cody','AI Coding','Enterprise AI coding assistance; Free and Pro plans ended in July 2025.','https://sourcegraph.com/cody','Paid','Codebase,Search'],
 ['Amazon Q Developer','AI Coding','AWS-focused AI assistance for software development.','https://aws.amazon.com/q/developer/','Freemium','AWS,Developer'],
 ['n8n','AI Automation','Workflow automation with integrations and AI agents.','https://n8n.io','Freemium','Workflow,Agent'],
 ['Zapier','AI Automation','Connect apps and automate routine business processes.','https://zapier.com','Freemium','Workflow,No-code'],
@@ -43,7 +43,7 @@ export const tools:Tool[] = [
 ['Fireflies.ai','AI Productivity','Meeting transcription, summaries and conversation insights.','https://fireflies.ai','Freemium','Meetings,Notes'],
 ['Glean','AI Search','Enterprise search and knowledge discovery platform.','https://www.glean.com','Paid','Enterprise,Search'],
 ['Lakera Guard','AI Security','Tools for protecting LLM applications from prompt attacks.','https://www.lakera.ai','Paid','Security,Guardrails'],
-['Protect AI','AI Security','Security products for AI and machine-learning systems.','https://protectai.com','Paid','Security,ML'],
+['Protect AI','AI Security','AI security capabilities acquired by Palo Alto Networks and integrated into Prisma AIRS.','https://www.paloaltonetworks.com/prisma/ai-runtime-security','Paid','Security,ML'],
 ['Arize AI','AI Observability','AI evaluation, tracing and observability platform.','https://arize.com','Freemium','Evaluation,Tracing'],
 ['Langfuse','AI Observability','Open-source LLM observability and prompt management.','https://langfuse.com','Freemium','Tracing,Open-source'],
 ['Weights & Biases','AI Observability','Experiment tracking and ML development tooling.','https://wandb.ai','Freemium','Evaluation,MLOps'],
@@ -99,6 +99,5 @@ export const tools:Tool[] = [
 ['Aider','AI Coding','Terminal-based AI pair programming for code repositories.','https://aider.chat','Free','Developer,Open-source'],
 ['Sentry Seer','AI Observability','AI-assisted issue investigation within application monitoring.','https://sentry.io','Paid','Debugging,Monitoring'],
 ['Comet ML','AI Observability','Experiment tracking and model evaluation tooling.','https://www.comet.com','Freemium','MLOps,Evaluation'],
-['Humanloop','AI Observability','Tools for evaluating and improving language model applications.','https://humanloop.com','Paid','Evaluation,Prompts'],
 ].map(([name,category,description,url,pricing,tags],i)=>({name,category,description,url,pricing:pricing as Tool['pricing'],tags:tags.split(','),featured:[0,5,12,16,21,34].includes(i)}));
 export const categories=['All tools',...Array.from(new Set(tools.map(t=>t.category)))];
