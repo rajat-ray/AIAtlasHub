@@ -60,3 +60,14 @@ The `AIAtlasHub vendor link health` GitHub Actions workflow runs weekly (Monday 
 The scanner checks only public URLs already listed in `data/tools.ts`. An HTTP success confirms reachability at the time of the request, **not** the vendor's identity, continued product availability, feature claims or pricing. Redirects should be inspected for changes of ownership, rebranding and product retirement. A 403, 429, timeout or other error is a review signal, not proof of a broken product. Some vendors prohibit or block automated checks.
 
 For each review item: open the vendor's official website manually, corroborate major lifecycle or pricing changes against authoritative sources, update the listing and dated `catalogUpdates` record, and create a `toolVerifications` entry only for fields genuinely checked. Do not automatically remove listings or change pricing based on this report. The workflow intentionally does not fail the main quality gate on transient vendor network errors.
+
+
+## GitHub-backed verification workflow
+
+1. From `/health#editorial-queue`, choose **Request review** for a specific tool. This opens the public `verify-listing.yml` issue form with a proposed title; the submitter must enter the exact listing URL, scope and authoritative evidence.
+2. Maintainers triage the issue, verify that the named tool exists, and request missing sources. Keep the issue open while evidence is incomplete. The `editorial-review` label indicates intake, **not approval**.
+3. Propose catalog and editorial changes in a separate pull request using `.github/PULL_REQUEST_TEMPLATE.md`. Link the issue, enumerate checked fields and document each official URL and access date. Update `toolVerifications` only when those checks were actually performed; update `catalogUpdates` only for real catalog changes.
+4. The existing quality workflow checks the catalog audit, TypeScript and build on pull requests. A maintainer reviews both evidence and CI results, requests changes where necessary and approves only after the claims are supportable.
+5. Merge is a deliberate maintainer action. Close the issue with the merged pull request or a documented rejection. An open issue, submitted PR or label never changes the public verification status.
+
+**Repository settings required for enforced approval:** enable branch protection or a ruleset on `main`, require the quality workflow status check and at least one approving review, and restrict direct pushes. Repository settings are not modified by this documentation; until configured, the approval procedure is editorial policy rather than a technically enforced merge gate.
