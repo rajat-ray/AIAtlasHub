@@ -11,6 +11,8 @@ export type CatalogUpdate={
  kind:'catalog'|'editorial'|'site';
 };
 export const catalogUpdates:CatalogUpdate[]=[
+ {date:'2026-10-12',title:'Catalog lifecycle corrections',summary:'Retired Humanloop after its documented September 2025 shutdown; updated Sourcegraph Cody to enterprise-only pricing and Protect AI to its Palo Alto Networks integration.',toolNames:['Sourcegraph Cody','Protect AI'],kind:'catalog'},
+
  {
   date:'2026-10-12',
   title:'Catalog change log introduced',
@@ -52,6 +54,9 @@ export type ToolVerification={
  note:string;
 };
 export const toolVerifications:Record<string,ToolVerification>={
+ 'Sourcegraph Cody':{checkedOn:'2026-10-12',sourceUrls:['https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans','https://sourcegraph.com/changelog/7-0-removals-deprecations'],scope:['identity','pricing','capabilities'],note:'Sourcegraph discontinued Cody Free and Pro in July 2025; Enterprise remained supported. The 2026 changelog also describes Cody Web being replaced by Deep Search. No security or privacy audit.'},
+ 'Protect AI':{checkedOn:'2026-10-12',sourceUrls:['https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-completes-acquisition-protect-ai'],scope:['identity','capabilities'],note:'Palo Alto Networks announced completion of the Protect AI acquisition in July 2025 and integration into Prisma AIRS. Current pricing was not independently checked; no security audit.'},
+
  'Devin Desktop':{checkedOn:'2026-10-12',sourceUrls:['https://windsurf.com/editor'],scope:['identity','pricing','capabilities'],note:'Official vendor page states Windsurf is now named Devin Desktop and lists Free, Pro, Max, Teams and Enterprise options. The IDE remains accessible, with agent-management features. Historical brand name retained in the directory pending a separate catalog identity review. No privacy/security audit.'},
  'Replit':{checkedOn:'2026-10-12',sourceUrls:['https://replit.com/pricing','https://replit.com/blog/pro-plan'],scope:['identity','pricing','capabilities'],note:'Official pricing and product update pages show Starter free, Core, Pro and Enterprise; AI app building, hosted projects and usage credits vary by plan. The former Teams plan was sunset. No privacy/security audit.'},
  'Notion AI':{checkedOn:'2026-10-12',sourceUrls:['https://www.notion.com/help/notion-ai-faqs','https://www.notion.com/pricing'],scope:['identity','pricing','capabilities'],note:'Official Notion sources show Notion AI is included with Business and Enterprise plans; Free and Plus receive limited trial responses. Premium models and some agents can require credits. The directory Paid label refers to ongoing full-feature access. No privacy/security audit.'},
