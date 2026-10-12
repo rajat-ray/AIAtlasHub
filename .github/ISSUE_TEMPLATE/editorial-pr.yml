@@ -1,0 +1,43 @@
+name: Editorial verification pull request
+description: Propose a catalog verification or correction with evidence and reviewer approval.
+title: "[Editorial] "
+labels: ["editorial-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is for source-backed catalog changes. All claims and sources are publicly visible.
+  - type: input
+    id: issue
+    attributes:
+      label: Related review issue
+      placeholder: "#123"
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: Exact tool names and fields changed
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Official evidence URLs, access dates and checked fields
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Author checklist
+      options:
+        - label: All source-backed claims were checked and qualified
+          required: true
+        - label: toolVerifications includes only fields actually checked
+          required: true
+        - label: catalogUpdates records actual editorial changes separately
+          required: true
+        - label: No unverified security or performance claims were introduced
+          required: true
+        - label: Catalog audit, TypeScript and build are ready for CI review
+          required: true
