@@ -272,3 +272,32 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .tool-freshness p,.tool-freshness li{font-size:13px;line-height:1.8;color:#526658}
 .tool-freshness ul{padding-left:22px}
 .tool-freshness a{color:#26704b;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+
+
+/* Catalog health and real scan report dashboard */
+.health-page{min-height:100vh;background:#fbfbf7;color:#173b2b;padding:38px 0 90px}
+.health-page h1{font:700 clamp(36px,5vw,55px) 'Space Grotesk',sans-serif;letter-spacing:-1.8px;margin:14px 0}
+.health-intro{max-width:780px;font-size:16px;line-height:1.8;color:#526658;margin:0 0 30px}
+.health-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:22px 0}
+.health-summary>div{padding:20px;background:#fff;border:1px solid #dce4d9;border-radius:13px;display:flex;flex-direction:column;gap:8px}
+.health-summary strong{font:700 34px 'Space Grotesk',sans-serif;color:#173b2b}
+.health-summary span{font-size:12px;line-height:1.5;color:#526658}
+.health-method,.health-review>p,.health-report>p,.health-caution{font-size:13px;line-height:1.8;color:#526658}
+.health-review,.health-report{margin:38px 0;padding-top:24px;border-top:1px solid #dce4d9}
+.health-review h2,.health-report h2{font:700 26px 'Space Grotesk',sans-serif}
+.health-queue{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.health-queue>a{background:#fff;border:1px solid #dce4d9;border-radius:10px;padding:13px;color:#173b2b;font-size:13px;font-weight:700}
+.health-queue>a span{display:block;font-size:11px;color:#526658;margin-top:5px;font-weight:400;overflow-wrap:anywhere}
+.health-upload{display:flex;align-items:center;gap:15px;flex-wrap:wrap;font-size:13px;font-weight:700;margin:20px 0}
+.health-upload input{max-width:100%;font:inherit}
+.health-empty{padding:18px;background:#edf2e9;border-radius:10px}
+.health-error{color:#9e2d2d!important}
+.health-timestamp{font-weight:700}
+.health-filter{display:flex;align-items:center;gap:10px;margin:20px 0;font-size:13px}
+.health-filter select{padding:9px;border:1px solid #dce4d9;border-radius:8px;background:#fff}
+.health-table-wrap{max-height:480px;overflow:auto;border:1px solid #dce4d9;border-radius:10px}
+.health-table-wrap table{width:100%;border-collapse:collapse;min-width:650px;font-size:12px;text-align:left}
+.health-table-wrap th,.health-table-wrap td{padding:11px;border-bottom:1px solid #dce4d9;vertical-align:top}
+.health-table-wrap a,.health-method a{color:#26704b;overflow-wrap:anywhere}
+@media(max-width:800px){.health-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.health-queue{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:500px){.health-queue{grid-template-columns:1fr}.health-summary strong{font-size:28px}}
