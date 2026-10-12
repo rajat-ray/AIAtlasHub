@@ -1,0 +1,51 @@
+name: Editorial source verification
+description: Request a documented review of an existing AIAtlasHub listing. Issues are public and never publish directly.
+title: "[Verification] "
+labels: ["editorial-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Public editorial review request. Do not include private data, API keys or proprietary documents. Opening this issue does not verify or change a listing.
+  - type: input
+    id: tool
+    attributes:
+      label: Exact catalog tool name
+      placeholder: Example AI tool
+    validations:
+      required: true
+  - type: input
+    id: listing
+    attributes:
+      label: AIAtlasHub listing URL
+      placeholder: https://aiatlashub.rajat-ray.workers.dev/tools/example
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Fields to review
+      options:
+        - label: Product identity and official website
+        - label: Pricing structure and plan limits
+        - label: Advertised capabilities
+        - label: Privacy policy claims
+        - label: Security claims
+        - label: Retirement, acquisition or rebranding
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Authoritative public source URLs and observations
+      description: Prefer official vendor pages. Distinguish vendor claims from independent tests.
+      placeholder: "https://vendor.example/pricing — describes available plans"
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: Suggested correction or outstanding question
+      description: Describe what needs checking; do not paste copyrighted material.
+    validations:
+      required: false
