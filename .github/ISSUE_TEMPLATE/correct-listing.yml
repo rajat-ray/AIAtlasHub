@@ -1,0 +1,43 @@
+name: Correct a tool listing
+description: Report inaccurate or outdated public information in AIAtlasHub.
+title: "[Correction] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is public. Please provide only publicly shareable information. Corrections are evaluated against authoritative sources.
+  - type: input
+    id: listing
+    attributes:
+      label: AIAtlasHub listing URL
+      placeholder: https://aiatlashub.rajat-ray.workers.dev/tools/example
+    validations:
+      required: true
+  - type: dropdown
+    id: issue
+    attributes:
+      label: What needs correction?
+      options:
+        - Official website
+        - Pricing model
+        - Description or capabilities
+        - Category or tags
+        - Privacy or security statement
+        - Editorial wording
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Current issue and proposed correction
+      description: Quote only short excerpts where needed, and provide your own explanation.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Authoritative public evidence
+      description: Official vendor documentation, pricing or policies are preferred.
+    validations:
+      required: true
