@@ -36,7 +36,7 @@ export const catalogUpdates:CatalogUpdate[]=[
   date:'2026-10-12',
   title:'Official-source verification: coding and productivity tools',
   summary:'Checked vendor documentation for Windsurf (now branded Devin Desktop), Replit, Notion AI and Canva. Verified advertised plans and capabilities only, not security, privacy or product performance.',
-  toolNames:['Windsurf','Replit','Notion AI','Canva'],
+  toolNames:['Devin Desktop','Replit','Notion AI','Canva'],
   kind:'editorial'
  }
 ];
@@ -52,7 +52,7 @@ export type ToolVerification={
  note:string;
 };
 export const toolVerifications:Record<string,ToolVerification>={
- 'Windsurf':{checkedOn:'2026-10-12',sourceUrls:['https://windsurf.com/editor'],scope:['identity','pricing','capabilities'],note:'Official vendor page states Windsurf is now named Devin Desktop and lists Free, Pro, Max, Teams and Enterprise options. The IDE remains accessible, with agent-management features. Historical brand name retained in the directory pending a separate catalog identity review. No privacy/security audit.'},
+ 'Devin Desktop':{checkedOn:'2026-10-12',sourceUrls:['https://windsurf.com/editor'],scope:['identity','pricing','capabilities'],note:'Official vendor page states Windsurf is now named Devin Desktop and lists Free, Pro, Max, Teams and Enterprise options. The IDE remains accessible, with agent-management features. Historical brand name retained in the directory pending a separate catalog identity review. No privacy/security audit.'},
  'Replit':{checkedOn:'2026-10-12',sourceUrls:['https://replit.com/pricing','https://replit.com/blog/pro-plan'],scope:['identity','pricing','capabilities'],note:'Official pricing and product update pages show Starter free, Core, Pro and Enterprise; AI app building, hosted projects and usage credits vary by plan. The former Teams plan was sunset. No privacy/security audit.'},
  'Notion AI':{checkedOn:'2026-10-12',sourceUrls:['https://www.notion.com/help/notion-ai-faqs','https://www.notion.com/pricing'],scope:['identity','pricing','capabilities'],note:'Official Notion sources show Notion AI is included with Business and Enterprise plans; Free and Plus receive limited trial responses. Premium models and some agents can require credits. The directory Paid label refers to ongoing full-feature access. No privacy/security audit.'},
  'Canva':{checkedOn:'2026-10-12',sourceUrls:['https://www.canva.com/pricing/','https://www.canva.com/help/using-canva-ai/'],scope:['identity','pricing','capabilities'],note:'Official Canva pricing and help pages describe Free and paid plans, differing monthly AI allowances and expanded Canva AI features on eligible paid plans. Limits and entitlements can change. No privacy/security audit.'},
