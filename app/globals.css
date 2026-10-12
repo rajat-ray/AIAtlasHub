@@ -105,3 +105,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .directory-view-note button{color:#26704b;text-decoration:underline;background:none;border:0;font-weight:800}
 @media(max-width:900px){.discovery-tiles,.category-index{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:500px){.discovery-tiles{grid-template-columns:1fr 1fr}.discovery-tiles>a,.discovery-tiles>button{padding:15px;gap:10px}.discovery-tiles strong{font-size:16px}.category-index{grid-template-columns:repeat(2,minmax(0,1fr))}.category-index button{padding:12px}}
+
+
+.workflow-explorer{padding:30px 0 55px}
+.workflow-explorer h2{font:700 clamp(28px,3.4vw,40px) 'Space Grotesk',sans-serif;letter-spacing:-1.4px;color:#173b2b;margin:12px 0 24px}
+.workflow-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.workflow-grid article{background:#fff;border:1px solid #dce4d9;border-radius:12px;padding:24px}
+.workflow-grid h3{font-size:20px;color:#173b2b;margin:0 0 8px}
+.workflow-grid p{font-size:13px;line-height:1.6;color:#647369;margin:0 0 18px}
+.workflow-grid article>div{display:flex;gap:8px;flex-wrap:wrap}
+.workflow-grid button{background:#edf2e9;border:1px solid #dce4d9;border-radius:20px;padding:9px 12px;color:#24593a;font-size:12px;display:inline-flex;align-items:center;gap:6px}
+.workflow-grid button:hover{background:#d9e9d9;border-color:#26704b}
+@media(max-width:650px){.workflow-grid{grid-template-columns:1fr}.workflow-grid article{padding:20px}}
