@@ -1,0 +1,5 @@
+import type {Metadata} from 'next';
+import Link from 'next/link';
+import {comparisons} from '../../data/comparisons';
+export const metadata:Metadata={title:'Compare AI Tools | AIAtlasHub',description:'Original, qualitative side-by-side AI tool comparisons with buying criteria and independent editorial notes.',alternates:{canonical:'/compare'}};
+export default function CompareIndex(){return <main className="compare-page"><div className="container"><Link href="/" className="learning-back">← AIAtlasHub directory</Link><span className="section-label">THE COMPARISON LIBRARY</span><h1>Compare tools. Decide with context.</h1><p className="compare-lead">Explore independent, qualitative comparisons. We do not assign unverified performance scores or reproduce vendor claims as test results.</p><div className="compare-index-grid">{comparisons.map(c=><Link href={`/compare/${c.slug}`} key={c.slug}><span className="section-label">{c.focus}</span><h2>{c.first} vs {c.second}</h2><p>{c.intro}</p><strong>Read comparison →</strong></Link>)}</div></div></main>}
