@@ -12,6 +12,7 @@ export default function sitemap():MetadataRoute.Sitemap {
   return [
     {url:base,changeFrequency:'weekly',priority:1},
     {url:`${base}/learn`,changeFrequency:'monthly',priority:0.8},
+    {url:`${base}/updates`,changeFrequency:'weekly',priority:0.65},
     {url:`${base}/compare`,changeFrequency:'monthly',priority:0.8},
     ...comparisons.map(c=>({url:`${base}/compare/${c.slug}`,changeFrequency:'monthly' as const,priority:0.75})),
     ...categories.filter(c=>c!=='All tools').map(c=>({url:`${base}/categories/${categorySlug(c)}`,changeFrequency:'monthly' as const,priority:0.8})),
