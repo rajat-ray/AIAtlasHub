@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 
 BASE = "https://aiatlashub.rajat-ray.workers.dev"
 HEADERS = {"User-Agent": "AIAtlasHub-Deployment-Smoke-Test/1.0"}
-PATHS = ["/", "/tools/chatgpt", "/tools/google-ai-studio", "/tools/aider", "/sitemap.xml", "/robots.txt"]
+PATHS = ["/", "/learn", "/tools/chatgpt", "/tools/google-ai-studio", "/tools/aider", "/sitemap.xml", "/robots.txt"]
 
 
 def fetch(path):
@@ -31,8 +31,8 @@ def main():
             if path == "/sitemap.xml":
                 root = ET.fromstring(body)
                 urls = root.findall("{http://www.sitemaps.org/schemas/sitemap/0.9}url")
-                if len(urls) != 101:
-                    raise ValueError(f"Expected 101 sitemap URLs, found {len(urls)}")
+                if len(urls) != 102:
+                    raise ValueError(f"Expected 102 sitemap URLs, found {len(urls)}")
             print(f"PASS {path} ({status})")
         except (urllib.error.URLError, ValueError, ET.ParseError) as exc:
             failed.append(path)
