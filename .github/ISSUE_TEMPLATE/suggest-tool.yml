@@ -1,0 +1,95 @@
+name: Suggest an AI tool
+description: Propose a public AI product for editorial review (not guaranteed inclusion).
+title: "[Tool suggestion] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve AIAtlasHub. Submissions are reviewed editorially; a suggestion does not guarantee listing or placement. This issue is public. Do not include passwords, customer data, unpublished material or other sensitive information.
+  - type: input
+    id: tool_name
+    attributes:
+      label: Product name
+      placeholder: Example AI Tool
+    validations:
+      required: true
+  - type: input
+    id: official_website
+    attributes:
+      label: Official product website
+      description: Link directly to the vendor or product, not a third-party directory.
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Primary category
+      options:
+        - AI Assistants
+        - AI Search
+        - AI Coding
+        - AI Automation
+        - AI Agents
+        - AI Infrastructure
+        - AI Audio
+        - AI Video
+        - AI Design
+        - AI Productivity
+        - AI Security
+        - AI Observability
+        - AI Writing
+        - AI Marketing
+        - AI Analytics
+        - Other / unsure
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What does the tool do?
+      description: Use original wording. Describe the primary user and workflow.
+      placeholder: Two or three sentences in your own words.
+    validations:
+      required: true
+  - type: dropdown
+    id: pricing
+    attributes:
+      label: Public pricing model (if known)
+      options:
+        - Free
+        - Freemium
+        - Paid
+        - Unknown / verify
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Public sources for key claims
+      description: Link to official documentation, pricing and privacy/security pages where available.
+      placeholder: |
+        Pricing: https://...
+        Documentation: https://...
+        Privacy: https://...
+    validations:
+      required: false
+  - type: dropdown
+    id: affiliation
+    attributes:
+      label: Your relationship to the product
+      options:
+        - Independent user
+        - Employee, founder or contractor
+        - Agency or representative
+        - Other / prefer not to say
+    validations:
+      required: true
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Submission confirmation
+      options:
+        - label: I understand this is a public submission, not a paid placement, and inclusion is not guaranteed.
+          required: true
