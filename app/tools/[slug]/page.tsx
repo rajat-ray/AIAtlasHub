@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { tools } from '../../../data/tools';
 import { editorialReviews } from '../../../data/editorial';
 import { categorySlug } from '../../../data/category-content';
+import { toolHistory, toolVerifications } from '../../../data/catalog-updates';
 
 const slugify=(name:string)=>name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 type Props={params:Promise<{slug:string}>};
@@ -17,6 +18,8 @@ export async function generateMetadata({params}:Props):Promise<Metadata>{
 export default async function ToolPage({params}:Props){
  const {slug}=await params;const t=tools.find(t=>slugify(t.name)===slug);if(!t)notFound();
  const review=editorialReviews[t.name];
+ const history=toolHistory(t.name);
+ const verification=toolVerifications[t.name];
  return <main style={{maxWidth:960,margin:'0 auto',padding:'48px 24px 100px',lineHeight:1.75}}>
  <Link href="/#directory">← Browse all AI tools</Link>
  <p style={{marginTop:32,fontSize:13,letterSpacing:1,textTransform:'uppercase'}}><Link href={`/categories/${categorySlug(t.category)}`}>{t.category}</Link></p>
@@ -33,6 +36,11 @@ export default async function ToolPage({params}:Props){
  <h3>What to verify before buying</h3><p>{review.checkBeforeBuying}</p></>
  :<><p>This product has not yet received a detailed editorial assessment. Use the questions below to evaluate its suitability.</p>
  <h3>Evaluation checklist</h3><ul><li>Does the product support your actual workflow and integrations?</li><li>What are the usage limits, total costs and cancellation terms?</li><li>How are data privacy, retention and access controls handled?</li><li>Can you validate output quality with representative tasks?</li></ul></>}
+ </section>
+ <section className="tool-freshness" aria-label="Listing freshness and sources"><h2>Listing freshness &amp; source checks</h2>
+ {history.length>0?<><p><strong>Last documented AIAtlasHub listing update:</strong> <time dateTime={history[0].date}>{history[0].date}</time></p><ul>{history.map((entry,i)=><li key={entry.date+'-'+i}><strong>{entry.title}</strong> — {entry.summary}</li>)}</ul></>:<p><strong>Last documented listing update:</strong> Not yet recorded in the dated change log.</p>}
+ {verification?<><p><strong>Vendor information checked:</strong> <time dateTime={verification.checkedOn}>{verification.checkedOn}</time> ({verification.scope.join(', ')})</p><p>{verification.note}</p><ul>{verification.sourceUrls.map(url=><li key={url}><a href={url} target="_blank" rel="noopener noreferrer">{url}</a></li>)}</ul></>:<p><strong>Vendor information independently re-verified:</strong> No dated, source-backed verification record is available for this listing.</p>}
+ <p>Catalog edits are not vendor launch dates, and a listed website is not proof that prices, features, privacy or security terms remain current. <Link href="/updates">Read our editorial update log →</Link></p>
  </section>
  <section style={{marginTop:36,borderTop:'1px solid #777',paddingTop:20}}>
  <h2>About this assessment</h2><p>AIAtlasHub provides independent, qualitative discovery guidance. These notes are not hands-on benchmarks, verified customer reviews or endorsements. Product details may change. Confirm pricing, security and features with the vendor.</p>
