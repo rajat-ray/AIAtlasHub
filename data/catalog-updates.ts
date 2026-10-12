@@ -11,7 +11,7 @@ export type CatalogUpdate={
  kind:'catalog'|'editorial'|'site';
 };
 export const catalogUpdates:CatalogUpdate[]=[
- {date:'2026-10-12',title:'Catalog lifecycle corrections',summary:'Retired Humanloop after its documented September 2025 shutdown; updated Sourcegraph Cody to enterprise-only pricing and Protect AI to its Palo Alto Networks integration.',toolNames:['Sourcegraph Cody','Protect AI'],kind:'catalog'},
+ {date:'2026-10-12',title:'Catalog lifecycle corrections',summary:'Removed Humanloop from the active directory after its documented September 2025 shutdown; updated Sourcegraph Cody to enterprise-only pricing and Protect AI to its Palo Alto Networks integration. Former Humanloop URL now points to this update log.',toolNames:['Sourcegraph Cody','Protect AI'],kind:'catalog'},
 
  {
   date:'2026-10-12',
