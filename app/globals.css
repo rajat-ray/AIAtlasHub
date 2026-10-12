@@ -264,3 +264,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .updates-tools a,.updates-explainer a{color:#26704b;text-decoration:underline;text-underline-offset:3px}
 .updates-explainer{border-top:1px solid #dce4d9;max-width:840px;margin-top:42px;padding-top:22px}
 .updates-explainer h2{font:700 26px 'Space Grotesk',sans-serif}
+
+
+/* Per-tool editorial freshness and verification disclosure */
+.tool-freshness{margin-top:34px;padding:24px;border:1px solid #dce4d9;border-radius:14px;background:#f5f8f1}
+.tool-freshness h2{font:700 24px 'Space Grotesk',sans-serif;color:#173b2b;margin:0 0 14px}
+.tool-freshness p,.tool-freshness li{font-size:13px;line-height:1.8;color:#526658}
+.tool-freshness ul{padding-left:22px}
+.tool-freshness a{color:#26704b;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
