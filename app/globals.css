@@ -117,3 +117,26 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .workflow-grid button{background:#edf2e9;border:1px solid #dce4d9;border-radius:20px;padding:9px 12px;color:#24593a;font-size:12px;display:inline-flex;align-items:center;gap:6px}
 .workflow-grid button:hover{background:#d9e9d9;border-color:#26704b}
 @media(max-width:650px){.workflow-grid{grid-template-columns:1fr}.workflow-grid article{padding:20px}}
+
+
+/* Original AIAtlasHub learning hub */
+.learning-teaser{display:grid;grid-template-columns:1.1fr 1fr;gap:42px;align-items:center;background:#edf2e9;border:1px solid #dce4d9;border-radius:18px;padding:42px;margin-top:22px;margin-bottom:50px}
+.learning-teaser h2,.learning-page h1{font:700 clamp(30px,4vw,47px) 'Space Grotesk',sans-serif;letter-spacing:-1.6px;line-height:1.14;color:#173b2b;margin:13px 0}
+.learning-teaser p,.learning-lead{color:#526658;line-height:1.75;font-size:15px;max-width:640px}
+.learning-teaser .primary-link{display:inline-flex;align-items:center;gap:9px;margin-top:12px}
+.learning-teaser-list{display:flex;flex-direction:column;gap:9px}
+.learning-teaser-list a{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #dce4d9;border-radius:10px;padding:16px;color:#173b2b;font-weight:700;font-size:13px}
+.learning-teaser-list a svg{margin-left:auto}
+.learning-teaser-list a span{color:#26704b;font-size:11px}
+.learning-teaser-list a:hover{border-color:#26704b}
+.learning-page{background:#fbfbf7;min-height:100vh;padding:38px 0 100px;color:#173b2b}
+.learning-back{display:block;color:#26704b;font-weight:700;margin-bottom:42px;font-size:13px}
+.learning-guides{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:36px}
+.learning-guides article{background:#fff;border:1px solid #dce4d9;border-radius:14px;padding:26px;scroll-margin-top:30px}
+.learning-guides h2{font:700 23px 'Space Grotesk',sans-serif;letter-spacing:-.6px;line-height:1.25;margin:15px 0;color:#173b2b}
+.learning-guides p,.learning-guides li{font-size:13px;line-height:1.75;color:#526658}
+.learning-guides ol{padding-left:20px}
+.learning-guides li{margin-bottom:10px}
+.learning-guides article>a{font-size:12px;font-weight:800;color:#26704b}
+.learning-disclaimer{font-size:12px;color:#647369;margin-top:24px}
+@media(max-width:850px){.learning-guides{grid-template-columns:1fr}.learning-teaser{grid-template-columns:1fr;gap:24px;padding:26px}}
